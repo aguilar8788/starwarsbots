@@ -4,8 +4,8 @@ var knex = require('../db/knex')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  knex('robot').select().then(function(robots){
-  res.render('index', { robots: robots });
+  knex('robot').select().then(function(robotdata){
+  res.render('index', { robotlist: robotdata });
   })
 });
 

@@ -1,6 +1,7 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+
 
 <ul>
-  <li></li>
+  {{#each robotlist}}
+  <li>{{this.name}} <img class='robotpicture' src={{this.image}}</li>
+  {{/each}}
 </ul>
